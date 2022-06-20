@@ -2,20 +2,19 @@
 ECHO OFF
 
 CLS
-ECHO %CD%
 ECHO ##########################
 ECHO #   DJANGO MANAGE MENU   #
 ECHO #      FOR WINDOWS       #
-ECHO #      VERSION 1.1       #
+ECHO #      VERSION 1.2       #
 ECHO ##########################
 ECHO.
 ECHO LOOKING FOR manage.py...
-IF EXIST "%~dp0manage.py" (
-    ECHO SETTING manage.py AS "%~dp0manage.py"
-    SET MANAGEPATH=%~dp0
-    SET MANAGEPY=%MANAGEPATH%manage.py
+IF EXIST "%CD%\manage.py" (
+    ECHO SETTING manage.py AS "%CD%\manage.py"
+    SET MANAGEPATH=%CD%
+    SET MANAGEPY=%MANAGEPATH%\manage.py
 ) ELSE (
-    ECHO manage.py NOT IN THE PATH "%~dp0"
+    ECHO manage.py NOT IN THE PATH "%CD%"
 )
 IF "%~1"=="" (
     ECHO FIRST PARAMETER WAS NOT PASSED FOR "%~f0"
@@ -47,7 +46,7 @@ CLS
 ECHO ##########################
 ECHO #   DJANGO MANAGE MENU   #
 ECHO #      FOR WINDOWS       #
-ECHO #      VERSION 1.1       #
+ECHO #      VERSION 1.2       #
 ECHO ##########################
 ECHO #                        #
 ECHO ######### ADMIN ##########
@@ -128,7 +127,7 @@ CLS
 ECHO ##########################
 ECHO #   DJANGO MANAGE MENU   #
 ECHO #      FOR WINDOWS       #
-ECHO #      VERSION 1.1       #
+ECHO #      VERSION 1.2       #
 ECHO ##########################
 ECHO #   DOCUMENTATION MENU   #
 ECHO ##########################
